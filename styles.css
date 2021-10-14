@@ -3,16 +3,18 @@ body, html{
   padding: 0;
   height: 100% ;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 nav{
-  width: 100% ;
+  width: 100vw ;
   position: fixed;
   margin: 0;
+  z-index: 1;
 }
 
 nav .nav-top{
-  width: 100%;
+  width: 100vw;
   height: 3rem;
   display: flex;
   background-color: rgba(255, 255, 255, 0.9);
@@ -67,4 +69,269 @@ nav .nav-list a:hover{
 nav img{
   height: 1.5rem;
   width: auto;
+}
+
+nav .nav-small{
+  display: none;
+}
+
+@media only screen and (max-width: 1000px){
+  .nav-middle, .nav-right{
+    display: none;
+  }
+
+  nav .nav-small{
+    display: inherit;
+  }
+
+  nav .nav-small a{
+    font-family: "Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: rgb(24,27,33);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin: 0;
+    background-color: rgba(0,0,0,10%);
+    border-radius: 5px;
+  }
+}
+
+.product{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+#model-s{
+  position: relative;
+  background-image: url(./img/models.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+#model-y{
+  position: relative;
+  background-image: url(./img/modely.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+#model-3{
+  position: relative;
+  background-image: url(./img/model3.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+#model-x{
+  position: relative;
+  background-image: url(./img/modelx.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+#solar-panels{
+  position: relative;
+  background-image: url(./img/solarpanels.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+#solar-roof{
+  position: relative;
+  background-image: url(./img/solarroof.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+#accessories{
+  position: relative;
+  background-image: url(./img/accessories.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px){
+  #model-s{
+    background-image: url(./img/models-mobile.jpeg);
+    background-size: 100vw;
+  }
+
+  #model-x{
+    background-image: url(./img/modelx-mobile.jpeg);
+    background-size: 100vw;
+  }
+
+  #model-3{
+    background-image: url(./img/model3-mobile.jpeg);
+    background-size: 100vw;
+  }
+
+  #accessories{
+    background-image: url(./img/accessories-mobile.jpeg);
+    background-size: 100vw;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  #solar-roof{
+    background-image: url(./img/solarroof-mobile.jpeg);
+    background-size: 100vw;
+  }
+
+  #model-y{
+    background-image: url(./img/modely-mobile.jpeg);
+    background-size: 100vw;
+  }
+}
+
+.product .content{
+  position: relative;
+  display: block;
+  min-height: 100%;
+  min-width: 256px;
+  width: 610px;
+}
+
+.product .top{
+   margin-top: 7.5rem;
+}
+
+.product h1{
+  margin: 0;
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 600;
+  color: rgb(57, 60, 65);
+  font-family: "Gotham Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.product h2{
+  margin-top: -0.5rem;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 48px;
+  font-weight: 400;
+  color: rgb(92,93,97);
+  font-family: "Gotham Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+}
+
+.product h2 a{
+  color: inherit;
+}
+
+.product .bottom{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  min-height: 40px;
+  min-width: 256px;
+  width: 610px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 5.4rem;
+}
+
+.product .bottom button{
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(23,26,32,0.8);
+  color: white;
+  font-family: "Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  width: 256px;
+  height: 40px;
+  align-content: center;
+}
+
+.product .bottom .white{
+  background-color: rgba(255,255,255, 0.65);
+  color: rgb(57,60,65);
+}
+
+@media only screen and (max-width: 550px){
+  .product .bottom{
+    width: auto;
+    justify-content: center;
+  }
+  .product .bottom button{
+    min-width: 90%;
+    margin-top: 1rem;
+  }
+}
+
+#accessories .bottom{
+  justify-content: center;
+  width: 100%;
+}
+
+footer{
+  box-sizing: border-box;
+  position: absolute;
+  z-index: visible;
+  width: 100%;
+  height: fit-content;
+  bottom: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+footer .footer-content a{
+  text-decoration: none;
+  color: rgb(92,93,97);
+  font-weight: 600;
+  font-size: 12px;
+  font-family: "Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin-left: 1.5rem;
+}
+
+@media only screen and (max-width: 610px){
+  footer .footer-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-hide{
+    display: none;
+  }
+  footer .footer-content a{
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  #accessories .bottom{
+    margin-bottom: 14rem;
+  }
 }
